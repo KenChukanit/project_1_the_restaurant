@@ -1,10 +1,11 @@
 import './App.css';
 import React,{useState,useEffect} from 'react'
-import FoodIndexPage from './components/pages/FoodIndexPage/FoodIndexPage';
-import {BrowserRouter,Route,Switch} from 'react-router-dom';
+import FoodIndexPage from './components/pages/FoodIndexPage/FoodIndexPage'
+import {BrowserRouter,Route,Switch} from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
 import {Session,Order} from './data/request'
-
+import countFoodCart from './scripts/organisedCart';
+ 
 function App(props) {
   const [carts, setCarts] = useState({carts: []});
   const [user, setUser] = useState('');
@@ -15,17 +16,10 @@ function App(props) {
   useEffect(()=>{
     //signIn()
     //loadUser();
-    //checkOrderStatus();
+    //checkOrderStatus(); 
   },[currentOrderStatus,currentOrderPayment]) 
 
-  const signIn =() =>{
-    const jwt = localStorage.getItem('jwt');
-    console.log(jwt)
-    if (jwt) {
-      const payload = jwtDecode(jwt);
-      setUser(payload);
-    }
-  } 
+  
 
   const updateOrderStatus =(status)=>{
     setCurrentOrderStatus(status)
@@ -65,34 +59,7 @@ function App(props) {
     setDisplayCart({carts: adjustedCart})
   }
 
-  const handleSubmit=(params)=>{
-    const REACT_APP_API_URL = process.env.REACT_APP_API_URL
-    const url = runtimeEnv().REACT_APP_API_URL
-    console.log(REACT_APP_API_URL) 
-    fetch('https://rails-the-restaurant.herokuapp.com/api/v1/session',{
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        credentials: 'include', 
-        method: 'POST',
-        body: JSON.stringify(params)
-        }).then((res) => {
-            return res.json();
-    })
-      .then((res)=>{
-        if(res.errors){
-          alert("wrong email or password")
-        }else{
-          console.log(res)
-          window.localStorage.setItem('jwt',res.token)
-          //signIn()
-      return Session.currentUser()
-        }
-      })
-
-    //setTimeout(()=>{checkOrderStatus()},3000)
-  }
-
+  
   const handleSignUp=()=>{
     Session.currentUser().then(user=>{
         setUser(user)
