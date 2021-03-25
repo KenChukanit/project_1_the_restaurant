@@ -1,6 +1,7 @@
 import './App.css';
 import React,{useState,useEffect} from 'react'
 import FoodIndexPage from './components/pages/FoodIndexPage/FoodIndexPage';
+import {BrowserRouter,Route,Switch} from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar'
 import {Session,Order} from './data/request'
 
