@@ -57,7 +57,8 @@ const NewOrderPage = (props)=>{
         <form onSubmit={event=>handleSubmit(event)}>
                     <input className ="btn btn-success " style={{width:"300px", height: "50px",fontSize: "20px"  }}type='submit' value='Send Order'/>
         </form>)}
-    
+        
+       
         </section>
         
     )

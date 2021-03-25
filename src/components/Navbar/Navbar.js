@@ -14,13 +14,13 @@ function Navbar(props) {
                   </button>
 
                
-                  <a href="index.html" class="navbar-brand">The<span> </span> Restaurant</a>
+                  <a onClick ={e=>e.preventDefault()} href="/" class="navbar-brand" style={{color:"gold"}}>The<span> </span> Restaurant</a>
             </div>
 
           
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-nav-first">
-                    <li><a href="/" class="smoothScroll">Home</a></li>
+                    <li ><a  href="/" class="smoothScroll"  >Home</a></li>
                     <li><a href="#about" class="smoothScroll"><NavLink to="/about">About</NavLink></a></li>
                     <li><a href="#team" class="smoothScroll">Chef</a></li>
                     <li><a href="/foods" class="smoothScroll">Menu</a></li>

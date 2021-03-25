@@ -11,7 +11,7 @@ function Home() {
                               <div class="caption">
                                    <div class="container">
                                         <div class="col-md-8 col-sm-12">
-                                             <h3>The Restaurant</h3>
+                                             <h3>Mission</h3>
                                              <h1 style={{color: "gold"}}>Our mission is to provide the best foods from comfort of your home</h1>
                                              <a href="#team" class="section-btn btn btn-default smoothScroll">Meet our chef</a>
                                         </div>
@@ -23,7 +23,7 @@ function Home() {
                               <div class="caption">
                                    <div class="container">
                                         <div class="col-md-8 col-sm-12">
-                                             <h3 >Your Perfect Breakfast</h3>
+                                             <h3 >Your Perfect Foods</h3>
                                              <h1 style={{color: "gold"}}>The best dinning quality can be here too!</h1>
                                              <a href="#menu" class="section-btn btn btn-default smoothScroll">Discover menu</a>
                                         </div>

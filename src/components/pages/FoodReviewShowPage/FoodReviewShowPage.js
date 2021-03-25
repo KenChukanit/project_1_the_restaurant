@@ -59,9 +59,9 @@ const FoodReviewShowPage = (props)=>{
             img_url={food.img_url}
             />
             
-            <h3>Total {!food || !Array.isArray(food.orders)? 0:food.orders.length} orders</h3>
-            <h3>Total {!food || !Array.isArray(food.reviews)? 0:food.reviews.length} reviews</h3>
-            <h3>Average Rating {!food || !Array.isArray(food.reviews)? 0:(average(food.reviews))} stars</h3>
+            <h4>Total {!food || !Array.isArray(food.orders)? 0:food.orders.length} orders</h4>
+            <h4>Total {!food || !Array.isArray(food.reviews)? 0:food.reviews.length} reviews</h4>
+            <h4>Average Rating {!food || !Array.isArray(food.reviews)? 0:(average(food.reviews))} stars</h4>
             <StarRating className= "mb-5"currentNumber ={(average(food.reviews))} max={5}/>
 
             {food.favouriters === [props.currentUser] && <button onClick={handleClick}> <i class="fas fa-heart"></i></button>}

@@ -9,7 +9,8 @@ import Home from './components/Home/Home'
 import About from './components/About/About'
 import NewFoodOrderPage from './components/pages/NewFoodOrderPage/NewFoodOrderPage'
 import FoodReviewShowPage from './components/pages/FoodReviewShowPage/FoodReviewShowPage'
-
+import SignInPage from './components/pages/SignInPage/SignInPage'
+import SignUpPage from './components/pages/SignUpPage/SignUpPage'
  
 function App(props) {
   const [carts, setCarts] = useState({carts: []});
@@ -24,7 +25,9 @@ function App(props) {
     //checkOrderStatus(); 
   },[currentOrderStatus,currentOrderPayment]) 
 
-  
+  const handleSubmit = ()=>{
+
+  }
 
   const updateOrderStatus =(status)=>{
     setCurrentOrderStatus(status)
@@ -149,6 +152,21 @@ function App(props) {
             />}                
             />
            
+           <Route exact path='/sign_in' render={(routeProps)=><SignInPage
+                                                          currentUser={user}      
+                                                          carts ={carts}
+                                                          onChangeCart= {onChangeCart}
+                                                          handleSubmit={handleSubmit} 
+                                                          {...routeProps}/>} 
+            />
+          <Route exact path='/sign_up' render={(routeProps)=><SignUpPage
+                                                          currentUser={user}      
+                                                          carts ={carts}
+                                                          onChangeCart= {onChangeCart}
+                                                          handleSignUp={handleSignUp} 
+                                                          {...routeProps}/>} 
+            />
+
           </Switch>
         </BrowserRouter>
     </div>

@@ -32,7 +32,7 @@ function FoodIndexPage(props){
     return(
       <section className={classes.content}>
         <div className={classes.toolbar}></div>
-            <Grow in>
+            {!foods?(<h3>Loading...</h3>):(<Grow in> 
               <Grid className={classes.container} container alignItems="stretch"  spacing={3} >
                       
             {foods.map((f,i) => {
@@ -56,7 +56,7 @@ function FoodIndexPage(props){
               })
             }
               </Grid>
-            </Grow>
+            </Grow>)}
         </section>
       )
 }
