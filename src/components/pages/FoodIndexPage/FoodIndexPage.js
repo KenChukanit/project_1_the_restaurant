@@ -30,13 +30,15 @@ function FoodIndexPage(props){
 
  console.log(props.currentOrderStatus)
     return(
-      <main className={classes.content} >
+      <section className={classes.content}>
+        <div className={classes.toolbar}></div>
             <Grow in>
               <Grid className={classes.container} container alignItems="stretch"  spacing={3} >
                       
             {foods.map((f,i) => {
                 return(
                   <>
+                 
                   <Grid key={i} item xs={12} sm={6} md={4} lg={3} style={{display:'flex'}}>
                       <FoodDetails  
                                     id = {f.id}
@@ -55,7 +57,7 @@ function FoodIndexPage(props){
             }
               </Grid>
             </Grow>
-        </main>
+        </section>
       )
 }
 

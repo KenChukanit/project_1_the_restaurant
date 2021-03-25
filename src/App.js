@@ -4,7 +4,12 @@ import FoodIndexPage from './components/pages/FoodIndexPage/FoodIndexPage'
 import {BrowserRouter,Route,Switch} from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
 import {Session,Order} from './data/request'
-import countFoodCart from './scripts/organisedCart';
+import countFoodCart from './scripts/organisedCart'
+import Home from './components/Home/Home'
+import About from './components/About/About'
+import NewFoodOrderPage from './components/pages/NewFoodOrderPage/NewFoodOrderPage'
+import FoodReviewShowPage from './components/pages/FoodReviewShowPage/FoodReviewShowPage'
+
  
 function App(props) {
   const [carts, setCarts] = useState({carts: []});
@@ -95,7 +100,55 @@ function App(props) {
                                                       {...props}
             />}                
             />
-         
+
+            <Route path='/foods/:id' render={(props)=><FoodReviewShowPage
+                                                currentUser={user}
+                                                carts ={carts}
+                                                onChangeCart = {onChangeCart} 
+                                                {...props}
+            />}                                
+            />
+
+             <Route exact path='/'  render={(props)=><Home
+                                                      currentUser={user} 
+                                                      currentOrderStatus = {currentOrderStatus}
+                                                      displayCart ={displayCart}
+                                                      onChangeCart = {onChangeCart}    
+                                                      carts ={carts}
+                                                      {...props}
+            />}                
+            />
+
+            <Route exact path='/'  render={(props)=><About
+                                                      currentUser={user} 
+                                                      currentOrderStatus = {currentOrderStatus}
+                                                      displayCart ={displayCart}
+                                                      onChangeCart = {onChangeCart}    
+                                                      carts ={carts}
+                                                      {...props}
+            />}                
+            />
+             <Route exact path='/about'  render={(props)=><About
+                                                      currentUser={user} 
+                                                      currentOrderStatus = {currentOrderStatus}
+                                                      displayCart ={displayCart}
+                                                      onChangeCart = {onChangeCart}    
+                                                      carts ={carts}
+                                                      {...props}
+            />}                
+            />
+
+            <Route exact path='/orders/new' render={(props)=><NewFoodOrderPage
+                                                     currentUser={user}
+                                                     carts ={carts}
+                                                     checkOrderStatus = {checkOrderStatus}
+                                                     onChangeCart = {onChangeCart} 
+                                                     displayCart ={displayCart}
+                                                     updateOrderStatus = {updateOrderStatus}
+                                                     {...props}
+            />}                
+            />
+           
           </Switch>
         </BrowserRouter>
     </div>

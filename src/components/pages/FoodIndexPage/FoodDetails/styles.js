@@ -18,6 +18,8 @@ export default makeStyles(()=>({
     },
     media: {
         height: 220,
+        width: 330,
+        display: "flex"
         
     },
     border: {

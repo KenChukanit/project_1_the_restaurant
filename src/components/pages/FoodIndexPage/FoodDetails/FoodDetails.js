@@ -12,12 +12,12 @@ function FoodDetails(props) {
             <CardActionArea>
                 <CardMedia image={img_url} className={classes.media}/>
                 <div >
-                    <Typography variant="body2" color ="textPrimary" component ="h2"><strong>{food_name}</strong> </Typography>
-                    <Typography variant="body2" color ="textPrimary" component ="h2">$ {price}</Typography>
+                    <Typography variant="body2" color ="textPrimary" component ="h1"><strong>{food_name}</strong> </Typography>
+                    <Typography variant="body2" color ="textPrimary" component ="h1">$ {price}</Typography>
                 </div>
                 <CardContent>
                 <div style={{height: "50px"}}>
-                    <Typography variant="body2" color = "textSecondary" component = "p" >{ingredients}</Typography>
+                    <Typography variant="body2" color = "textPrimary" component = "h3" >{ingredients}</Typography>
                 </div>
                 </CardContent>
             </CardActionArea>

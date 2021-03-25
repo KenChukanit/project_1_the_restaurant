@@ -1,0 +1,50 @@
+
+
+.speech-bubble {
+    filter: drop-shadow(-1px -1px 2px rgba(0, 0, 0, 0.1)) drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.15));
+    margin: 1rem;
+    margin-bottom: 40px;
+    padding: 1.5rem 2rem;
+    position: relative;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    background: #f5f6f8;
+    color: rgb(12, 12, 12);
+   
+  }
+  .speech-bubble::before {
+    border: 12.5px solid transparent;
+    border-top: 12.5px solid #f5f6f8;
+    border-bottom: 0;
+    height: 0;
+    width: 0;
+    border-top-width: 25px;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 3rem;
+    bottom: -25px;
+    transform-origin: center;
+    transform: rotate(90deg) skew(-25deg) translateY(16.6666666667px);
+  }
+  
+  .speech-bubble cite {
+    position: absolute;
+    bottom: -2rem;
+    left: 4.5rem;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    color: white;
+  }
+.button-delete{
+  background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)';
+  border: 0;
+  border-radius: 3;
+  box-shadow: '0 3px 5px 2px rgba(255, 105, 135, .3)';
+  color: 'white';
+  height: 48;
+  padding: '0 30px';
+}
