@@ -28,7 +28,7 @@ function FoodIndexPage(props){
         loadIndex()
     },[])
 
- console.log(props.currentOrderStatus)
+ console.log(props.currentUser)
     return(
       <section className={classes.content}>
         <div className={classes.toolbar}></div>

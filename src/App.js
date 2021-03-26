@@ -25,22 +25,27 @@ function App(props) {
     //checkOrderStatus(); 
   },[currentOrderStatus,currentOrderPayment]) 
 
-  const handleSubmit = ()=>{
-
-  }
-
-  const updateOrderStatus =(status)=>{
-    setCurrentOrderStatus(status)
-  }
-
   const loadUser=()=>{
-   
     Session.currentUser()
     .then((user)=>{
       console.log(user)
       setUser(user);
     })
   }
+
+  const handleSubmit = (params)=>{
+    Session.create(params)
+      .then((user)=>{
+        setUser(user)
+        
+      })
+  }
+
+  const updateOrderStatus =(status)=>{
+    setCurrentOrderStatus(status)
+  }
+
+ 
   const checkOrderStatus=()=>{
     Order.orderUser().then((orders)=>{
       if(!orders || orders.length === 0){ 

@@ -12,6 +12,7 @@ import {CardMedia} from '@material-ui/core'
 
 function TableOrder(props) {
 
+
     const TAX_RATE = 0.05;
     function ccyFormat(num) {
         return `${num.toFixed(2)}`;
@@ -30,9 +31,9 @@ function TableOrder(props) {
             minWidth: 700,
         }
     });
-    const {organisedCart,removeOrder} = props
+    const {organisedCart,removeOrder,handleSubmit} = props
     return (
-        <div >
+        <section className = {classes.content}>
         <TableContainer  >
       <Table className={classes.table} aria-label="spanning table">
           <TableHead  >
@@ -102,7 +103,10 @@ function TableOrder(props) {
         </TableBody>
       </Table>
     </TableContainer>
-        </div>
+        <form onSubmit={event=>handleSubmit(event)}>
+                    <input className ="btn btn-success " style={{width:"300px", height: "50px",fontSize: "20px"  }}type='submit' value='Send Order'/>
+        </form>
+        </section>
     )
 }
 

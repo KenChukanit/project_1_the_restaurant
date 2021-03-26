@@ -32,7 +32,7 @@ function SignInPage(props) {
         <main className={classes.content}>
          
          <div className={classes.toolbar}/>
-      
+         <div className={classes.toolbar}/>
          {!props.currentUser && 
         <form onSubmit={onSubmit} className="login ">
         <header>Login</header>

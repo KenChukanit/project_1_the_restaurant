@@ -57,10 +57,10 @@ export default makeStyles((theme)=>({
     content: {
       flexGrow: 1,
       backgroundImage: "linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);",
-      padding: theme.spacing(3),
-      width: "100vw",
+        padding: theme.spacing(3), 
+      width: "100%",
       height: "100vh",
-      postion: "fixed"
+    
     
     },
 }

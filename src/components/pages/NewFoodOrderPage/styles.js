@@ -49,10 +49,13 @@ export default makeStyles((theme)=>({
       padding: theme.spacing(3),
       fontFamily: 'Roboto Slab',
       backgroundImage: "linear-gradient(to top, #fff1eb 0%, #ace0f9 100%)",
- 
-      width: "100vw",
-      height: "100vh",
-      marginBottom: "20px"
+    display: "flex",   
+        flexDirection: 'column',
+        justifyContent: "center",
+        marginTop: "100px",
+      width: "100%",
+      height: '100%',
+    
     
     },
     header: {

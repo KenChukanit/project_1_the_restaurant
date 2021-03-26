@@ -46,20 +46,18 @@ const NewOrderPage = (props)=>{
     let organisedCart = cart
     console.log(organisedCart)
     return(
-        <section className={classes.content} style={{width:"100vw", height: "100vh"}}>
-             <div className={classes.toolbar}/>
-             <div className={classes.toolbar}/>
+        <div  className={classes.content} >
+         
+
            
           {!organisedCart || props.carts.carts.length === 0? (<EmptyCart/>):<TableOrder   organisedCart ={organisedCart}
                         removeOrder = {removeOrder}
+                        handleSubmit= {handleSubmit}
           />}
-    {!organisedCart || props.carts.carts.length === 0? (<div></div>):(
-        <form onSubmit={event=>handleSubmit(event)}>
-                    <input className ="btn btn-success " style={{width:"300px", height: "50px",fontSize: "20px"  }}type='submit' value='Send Order'/>
-        </form>)}
+   
         
        
-        </section>
+        </div>
         
     )
     

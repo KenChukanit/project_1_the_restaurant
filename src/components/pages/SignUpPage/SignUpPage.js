@@ -42,7 +42,7 @@ const SignUpPage=(props)=>{
     }
     return(
         <main className={classes.content}>
-            
+    <div className={classes.toolbar}/>
          <div id="app">
             <section className="form-container">
                 <form onSubmit={handleSubmit} className="login">
