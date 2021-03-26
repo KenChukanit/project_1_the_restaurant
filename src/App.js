@@ -6,11 +6,11 @@ import Navbar from './components/Navbar/Navbar'
 import {Session,Order} from './data/request'
 import countFoodCart from './scripts/organisedCart'
 import Home from './components/Home/Home'
-import About from './components/About/About'
 import NewFoodOrderPage from './components/pages/NewFoodOrderPage/NewFoodOrderPage'
 import FoodReviewShowPage from './components/pages/FoodReviewShowPage/FoodReviewShowPage'
 import SignInPage from './components/pages/SignInPage/SignInPage'
 import SignUpPage from './components/pages/SignUpPage/SignUpPage'
+import FoodSearchPage from './components/pages/FoodSearchPage/FoodSearchPage'
  
 function App(props) {
   const [carts, setCarts] = useState({carts: []});
@@ -127,24 +127,8 @@ function App(props) {
             />}                
             />
 
-            <Route exact path='/'  render={(props)=><About
-                                                      currentUser={user} 
-                                                      currentOrderStatus = {currentOrderStatus}
-                                                      displayCart ={displayCart}
-                                                      onChangeCart = {onChangeCart}    
-                                                      carts ={carts}
-                                                      {...props}
-            />}                
-            />
-             <Route exact path='/about'  render={(props)=><About
-                                                      currentUser={user} 
-                                                      currentOrderStatus = {currentOrderStatus}
-                                                      displayCart ={displayCart}
-                                                      onChangeCart = {onChangeCart}    
-                                                      carts ={carts}
-                                                      {...props}
-            />}                
-            />
+          
+            
 
             <Route exact path='/orders/new' render={(props)=><NewFoodOrderPage
                                                      currentUser={user}
@@ -170,6 +154,15 @@ function App(props) {
                                                           onChangeCart= {onChangeCart}
                                                           handleSignUp={handleSignUp} 
                                                           {...routeProps}/>} 
+            />
+
+          <Route path='/search' render={(props)=><FoodSearchPage
+                                                currentUser={user}
+                                                carts ={carts}
+                                                displayCart ={displayCart}
+                                                onChangeCart = {onChangeCart}
+                                                {...props} 
+            />}                                           
             />
 
           </Switch>
