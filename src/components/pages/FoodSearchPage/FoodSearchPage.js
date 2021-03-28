@@ -18,9 +18,12 @@ function FoodSearchPage(props) {
         tempCart.push(item)
         props.onChangeCart(tempCart);
     }
-  
+   
   return (
-    <main className={classes.content} style={{}}>
+    <div className={classes.content} style={{}}>
+      <div className={classes.container}>
+
+
        <span id="title"><strong>The Restaurant</strong></span>
        <legend>Search By</legend>
         <FormGroup className="form-check form-check " style={{fontFamily: 'Shadows Into Light Two', color: "darkGreen ",fontSize: "15px",display: "flex", flexDirection: "row" , justifyContent:"center", width: "100%"}}>
@@ -68,8 +71,9 @@ function FoodSearchPage(props) {
             {category === "ingredients" && <SearchByIngredients handleClick = {handleClick}/>}
 
             {category === "price" && <SearchByPrice handleClick = {handleClick}/>}
+      </div>
         
-    </main>
+    </div>
   )
 }
 export default FoodSearchPage

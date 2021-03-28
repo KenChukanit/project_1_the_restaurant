@@ -11,6 +11,7 @@ import FoodReviewShowPage from './components/pages/FoodReviewShowPage/FoodReview
 import SignInPage from './components/pages/SignInPage/SignInPage'
 import SignUpPage from './components/pages/SignUpPage/SignUpPage'
 import FoodSearchPage from './components/pages/FoodSearchPage/FoodSearchPage'
+import FoodInfoPage from './components/pages/FoodInfoPage/FoodInfoPage'
  
 function App(props) {
   const [carts, setCarts] = useState({carts: []});
@@ -127,7 +128,13 @@ function App(props) {
             />}                
             />
 
-          
+            <Route path='/food_info' render={(props)=><FoodInfoPage
+                                                currentUser={user}
+                                                carts ={carts}
+                                                onChangeCart = {onChangeCart}
+                                                {...props} 
+            />}                                           
+            />
             
 
             <Route exact path='/orders/new' render={(props)=><NewFoodOrderPage

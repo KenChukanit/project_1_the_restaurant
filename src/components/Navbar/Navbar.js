@@ -21,9 +21,9 @@ function Navbar(props) {
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-nav-first">
                     <li ><a  href="/" class="smoothScroll"  >Home</a></li>
+                    <li><NavLink to="/foods">Menu</NavLink></li>
                     <li><NavLink to="/search">Serach</NavLink></li>
-                    <li><a href="#team" class="smoothScroll">Chef</a></li>
-                    <li><a href="/foods" class="smoothScroll">Menu</a></li>
+                    <li><NavLink to="/food_info">Recipes</NavLink></li>    
                     <li><a href="#contact" class="smoothScroll">Contact</a></li>
                 </ul>
 

@@ -47,7 +47,7 @@ const NewOrderPage = (props)=>{
     console.log(organisedCart)
     return(
         <div  className={classes.content} >
-         
+           <div className={classes.toolbar}></div>
 
            
           {!organisedCart || props.carts.carts.length === 0? (<EmptyCart/>):<TableOrder   organisedCart ={organisedCart}

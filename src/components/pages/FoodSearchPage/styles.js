@@ -46,11 +46,11 @@ export default makeStyles((theme)=>({
     toolbar: theme.mixins.toolbar,
     content: {
       flexGrow: 1,
-      backgroundColor: theme.palette.background.default,
+      backgroundImage: 'linear-gradient(to top, #5ee7df 0%, #b490ca 100%);',
       padding: theme.spacing(3),
       width: "100%",
       height: '100%',
-      marginTop: "100px"
+  
     
     },
     addButton: {

@@ -1,4 +1,5 @@
 import React from 'react'
+import {NavLink} from 'react-router-dom';
 
 function Home() {
     return (
@@ -25,7 +26,9 @@ function Home() {
                                         <div class="col-md-8 col-sm-12">
                                              <h3 >Your Perfect Foods</h3>
                                              <h1 style={{color: "gold"}}>The best dinning quality can be here too!</h1>
+                                             <NavLink to="/foods">
                                              <a href="#menu" class="section-btn btn btn-default smoothScroll">Discover menu</a>
+                                             </NavLink>
                                         </div>
                                    </div>
                               </div>
@@ -36,8 +39,10 @@ function Home() {
                                    <div class="container">
                                         <div class="col-md-8 col-sm-12">
                                              <h3>New Restaurant in Town</h3>
-                                             <h1  style={{color: "gold"}}>Enjoy our special menus every Sunday and Friday</h1>
-                                             <a href="#contact" class="section-btn btn btn-default smoothScroll">Reservation</a>
+                                             <h1  style={{color: "gold"}}>Enjoy our special menus and new recipes for free</h1>
+                                             <NavLink to="/food_info" class="section-btn btn btn-default smoothScroll">
+                                                  Recipes
+                                             </NavLink>
                                         </div>
                                    </div>
                               </div>
@@ -67,7 +72,7 @@ function Home() {
 
                   <div class="col-md-6 col-sm-12">
                        <div class="wow fadeInUp about-image" data-wow-delay="0.6s">
-                            <img src="images/about-image.jpg" class="img-responsive" alt=""/>
+                            <img src="images/thaiabout1.jpeg" class="img-responsive" alt="" width=""/>
                        </div>
                   </div>
                   
@@ -88,7 +93,7 @@ function Home() {
 
                     <div class="col-md-4 col-sm-4">
                          <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
-                              <img src="images/team-image1.jpg" class="img-responsive" alt=""/>
+                              <img src="images/chef6.jpeg" class="img-responsive" alt="" />
                                    <div class="team-hover">
                                         <div class="team-item">
                                              <h4>Duis vel lacus id magna mattis vehicula</h4> 
@@ -100,14 +105,14 @@ function Home() {
                                    </div>
                          </div>
                          <div class="team-info">
-                              <h3>New Catherine</h3>
-                              <p>Kitchen Officer</p>
+                              <h3>Tin</h3>
+                              <p>Kitchen Head</p>
                          </div>
                     </div>
 
                     <div class="col-md-4 col-sm-4">
                          <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
-                              <img src="images/team-image2.jpg" class="img-responsive" alt=""/>
+                              <img src="images/chef2.jpeg" class="img-responsive" alt=""/>
                                    <div class="team-hover">
                                         <div class="team-item">
                                              <h4>Cras suscipit neque quis odio feugiat</h4>
@@ -119,14 +124,14 @@ function Home() {
                                    </div>
                          </div>
                          <div class="team-info">
-                              <h3>Lindsay Perlen</h3>
-                              <p>Owner &amp; Manager</p>
+                              <h3>Eddy</h3>
+                              <p>Chef &amp; Manager</p>
                          </div>
                     </div>
 
                     <div class="col-md-4 col-sm-4">
                          <div class="team-thumb wow fadeInUp" data-wow-delay="0.6s">
-                              <img src="images/team-image3.jpg" class="img-responsive" alt=""/>
+                              <img src="images/chef3.jpeg" class="img-responsive" alt=""/>
                                    <div class="team-hover">
                                         <div class="team-item">
                                              <h4>Etiam auctor enim tristique faucibus</h4>
@@ -138,8 +143,8 @@ function Home() {
                                    </div>
                          </div>
                          <div class="team-info">
-                              <h3>Isabella Grace</h3>
-                              <p>Pizza Specialist</p>
+                              <h3>Gin</h3>
+                              <p>Seafood Specialist</p>
                          </div>
                     </div>
                     

@@ -52,7 +52,7 @@ export default makeStyles((theme)=>({
     display: "flex",   
         flexDirection: 'column',
         justifyContent: "center",
-        marginTop: "100px",
+      
       width: "100%",
       height: '100%',
     
