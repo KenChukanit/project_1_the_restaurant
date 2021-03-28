@@ -24,7 +24,7 @@ function Navbar(props) {
                     <li><NavLink to="/foods">Menu</NavLink></li>
                     <li><NavLink to="/search">Serach</NavLink></li>
                     <li><NavLink to="/food_info">Recipes</NavLink></li>    
-                    <li><a href="#contact" class="smoothScroll">Contact</a></li>
+                    
                 </ul>
 
                   <ul class="nav navbar-nav navbar-right" >

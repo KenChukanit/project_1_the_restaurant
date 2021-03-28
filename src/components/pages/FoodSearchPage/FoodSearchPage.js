@@ -40,6 +40,7 @@ function FoodSearchPage(props) {
             Food Name
           </Label>
         </FormGroup>
+        <span style={{visibility:"hidden"}}>space</span>
         <FormGroup check className="form-check form-check-inline ">
           <Input className="form-check-input " 
                   type="checkbox"
@@ -52,6 +53,7 @@ function FoodSearchPage(props) {
             Ingredients
           </Label>
         </FormGroup>
+        <span style={{visibility:"hidden"}}>space</span>
         <FormGroup check className="form-check form-check-inline">
           <Input className="form-check-input " 
                   type="checkbox" 
