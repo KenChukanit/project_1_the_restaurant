@@ -31,9 +31,9 @@ function Navbar(props) {
                   {props.currentOrderStatus !== "Active" ? (<NavLink to='/orders/new' style={{ textDecoration: 'none',marginLeft: "120px", marginRight:"20px", color:"gold",fontSize:"23px" }}>
                        <i className="fas fa-shopping-cart">{props.carts.carts.length>=0?`  ${props.carts.carts.length} `:""}</i>
                     </NavLink>):(<span style={{visibility: "hidden",marginLeft: "120px", marginRight:"20px"}}>cart</span>)}
-                      {props.currentUser === null && <a href="/sign_in" class="section-btn">Sign In</a>}
-                      {props.currentUser === null  && <a href="/sign_up" class="section-btn">Sign Up</a>}
-                      <span>{props.currentUser !== null ?props.currentUser.username:"..."}</span>
+                      {props.currentUser !== null && <a href="/sign_in" class="section-btn">Sign In</a>}
+                      {props.currentUser !== null  && <a href="/sign_up" class="section-btn">Sign Up</a>}
+                      <span>{props.currentUser !== null ?props.currentUser.username:""}</span>
                   </ul>
              </div>
 
