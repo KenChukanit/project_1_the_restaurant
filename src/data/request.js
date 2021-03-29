@@ -1,4 +1,4 @@
-const BASE_URL = 'https://rails-the-restaurant.herokuapp.com/api/v1';
+const BASE_URL = 'http://rails-the-restaurant.herokuapp.com/api/v1';
 
 export const Session = {
     create(params) {
