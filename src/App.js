@@ -22,7 +22,7 @@ function App(props) {
 
   useEffect(()=>{
     //signIn()
-    //loadUser();
+    loadUser();
     //checkOrderStatus(); 
   },[currentOrderStatus,currentOrderPayment]) 
 
@@ -37,8 +37,8 @@ function App(props) {
   const handleSubmit = (params)=>{
     Session.create(params)
       .then((user)=>{
-        setUser(user)
-        
+      
+        return loadUser()
       })
   }
 
@@ -78,7 +78,7 @@ function App(props) {
     Session.currentUser().then(user=>{
         setUser(user)
     })
-    setTimeout(()=>{checkOrderStatus()},3000)
+    //setTimeout(()=>{checkOrderStatus()},3000)
   }
 
   const destroySession=()=>{
@@ -88,7 +88,7 @@ function App(props) {
       })
   }
 
- 
+console.log(user)
   return (
     <div className="App">
             <BrowserRouter>
